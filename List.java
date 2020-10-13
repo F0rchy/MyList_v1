@@ -47,4 +47,19 @@ public class List {
         this.begin = null;
         this.counter = 0;
     }
+
+    public long getCounter() {
+        return counter;
+    }
+
+    public Item end() {
+        if (this.begin == null) {
+            return null;
+        }
+        Item iter = this.begin;
+        while (iter.hasNext()) {
+            iter = iter.getNext();
+        }
+        return iter;
+    }
 }

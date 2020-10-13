@@ -142,4 +142,24 @@ public class List {
             }
         }
     }
+
+    public void sort() {
+        Item a;
+        Item b;
+        boolean flag = true;
+        while (flag) {
+            int count = 0;
+            for (int i = 1; i <= this.counter - 1; i++) {
+                a = indexAt(i - 1);
+                b = indexAt(i);
+                if (b.getValue() < a.getValue()) {
+                    swap(i - 1, i);
+                    count++;
+                }
+            }
+            if (count == 0) {
+                flag = false;
+            }
+        }
+    }
 }

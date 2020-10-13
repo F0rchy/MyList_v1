@@ -39,4 +39,12 @@ public class List {
             return Long.toString(this.value);
         }
     }
+
+    private Item begin;
+    private long counter;
+
+    public List() {
+        this.begin = null;
+        this.counter = 0;
+    }
 }

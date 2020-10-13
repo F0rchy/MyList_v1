@@ -73,4 +73,21 @@ public class List {
         }
         return iter;
     }
+
+    public String toString() {
+        String result = "[ ";
+        if (this.begin == null) {
+            return null;
+        }
+        else {
+            Item iter = this.begin;
+            while (iter.hasNext()) {
+                result += iter.toString() + ", ";
+                iter = iter.getNext();
+            }
+            result += iter.toString();
+        }
+        result += " ]";
+        return result;
+    }
 }

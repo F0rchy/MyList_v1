@@ -52,6 +52,17 @@ public class List {
         return counter;
     }
 
+    public void add(int value) {
+        Item item = new Item(value);
+        if (this.begin == null) {
+            this.begin = item;
+        }
+        else {
+            end().setNext(item);
+        }
+        this.counter++;
+    }
+
     public Item end() {
         if (this.begin == null) {
             return null;

@@ -23,5 +23,4 @@ public class Main {
         a.sort();
         System.out.println(a.toString());
     }
-    }
 }
